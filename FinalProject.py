@@ -50,6 +50,7 @@ def whole_map():
 
 
 # show every 20 Skyscrapers around the world(narrow down)
+@st.cache
 def rank_map(select_rank):
     skyscrapers_data = pd.read_csv("Skyscrapers2021.csv")
     sky_df = pd.DataFrame(skyscrapers_data, columns=["RANK", "CITY", "Latitude", "Longitude"])
